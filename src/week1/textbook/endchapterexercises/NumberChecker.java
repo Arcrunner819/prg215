@@ -1,3 +1,5 @@
+package week1.textbook.endchapterexercises;
+
 /* Write statements that can be used in a Java program to read two integers
 and display the number of integers that lie between them, including the integers
 themselves. for eg: four integers are between 3 and 6: 3, 4, 5, and 6 */

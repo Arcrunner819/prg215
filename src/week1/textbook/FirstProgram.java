@@ -1,3 +1,5 @@
+package week1.textbook;
+
 import java.util.Scanner; //gets Scanner class from java.util package(library)
 
 public class FirstProgram { //Class name should match File name.java

@@ -1,3 +1,5 @@
+package week1.textbook.endchapterexercises;
+
 /*TO DO:
 Given a person's year of birth, the Birthday Wizard can compute the year in which the person's nth birthday will occur or has occured.
 Write the statments that the Java program will use to perform this calculation

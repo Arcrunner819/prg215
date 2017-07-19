@@ -1,3 +1,5 @@
+package week1.textbook.endchapterexercises;
+
 import java.util.Scanner;
 
 

@@ -1,3 +1,5 @@
+package week1.assignment;
+
 import java.util.Scanner;
 
 public class SyntaxError {

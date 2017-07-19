@@ -1,3 +1,5 @@
+package week1.textbook.endchapterexercises;
+
 // The following program has run-time errors. Find and Fix the errors.
 
 import java.util.Scanner;
