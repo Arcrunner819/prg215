@@ -1,11 +1,15 @@
 package week2.assignment;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 /**
  * Tsubo is a Japanese unit of measure for area. 1 Tsubo is equal to 35.58 square feet.
  * Write a program that asks the user if they want to convert from Tsubo to square feet or from square feet to Tsubo.
  * Include code that asks users to input a number to convert. The code should also display the converted unit.
  */
 import java.util.Scanner;
+
+import javax.swing.plaf.basic.BasicSplitPaneUI.KeyboardDownRightHandler;
 	
 public class TsuboConverter
 {
@@ -24,42 +28,46 @@ public class TsuboConverter
         int userInput = keyboard.nextInt();
         
         //declare variables at class level for use in conditional logic
-        String sqftResultAsString;       	
+              	
         double sqftInput;
         double sqftResult;
-        String sqftResultFormat;
+        double tsuboInput;
+        double tsuboResult;
         
-        //
         if(userInput == 1) {
         	
         	
         	System.out.println("You have chosen to convert square feet to Tsubo");
         	System.out.println("Please enter the total sqft you are looking to convert");
         	
-        	sqftInput = keyboard.nextInt();
+        	sqftInput = keyboard.nextDouble();
         	
+        	// Double is converted to string so out put remains an object of the same data type
         	sqftResult = sqftInput / TSUBO;
-        	sqftResultAsString = String.valueOf(sqftResult); //Creates string representation of result double value so that it can be formatted
-        	sqftResultFormat = String.format("%,.2f", sqftResultAsString);
+        	DecimalFormat sqftFormatted = new DecimalFormat("#####.00");
+        	String resultOut = sqftFormatted.format(sqftResult);
+        	System.out.println(sqftInput + " is equal to :" + resultOut  + " Tsubo");
         	
         	
-        	
-        	System.out.println(sqftInput + " is equal to :" + sqftResultFormat  + " Tsubo");
-        	
-        	
-        } /*else if(userInput == 2 ) {
+        } else if(userInput == 2 ) {
         	
         	System.out.println("You have chose to convert TSUBO to sqft");
         	System.out.println("Please enter the total Tsubo you are trying to convert");
         	
-        	double tsuboInput = keyboard.nextInt();
-        	result = tsuboInput * TSUBO;
+        	tsuboInput = keyboard.nextDouble();
         	
-        	System.out.println(tsuboInput + " is equal to: " + result + " sqft");
+        	// Follows same logic above. Double is converted to string so output remains an object of the same data type, and variables can be reused if expanding
+        	tsuboResult = tsuboInput * TSUBO;
+        	DecimalFormat tsuboFormatted = new DecimalFormat("#####.00");
+        	String tsuboOut = tsuboFormatted.format(tsuboResult);
         	
-        } */else {
+        	System.out.println(tsuboInput + " is equal to: " + tsuboOut + " sqft");
+        	
+        } else {
         	System.out.println("Please enter a valid selection");
         }
+        // Reduces memory leak by closing scanner object
+        keyboard.close();
     }
-    		
+        		
 }
