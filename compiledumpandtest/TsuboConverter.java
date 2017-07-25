@@ -1,4 +1,4 @@
-package week2.assignment;
+
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
