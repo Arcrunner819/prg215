@@ -1,5 +1,5 @@
 
-
+package week3.assignment;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
